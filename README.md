@@ -1,4 +1,4 @@
-Interference_VBF
+Interference VBF
 ================
 
 Interference between WW+2jets and VBF HWW repository.
@@ -18,6 +18,11 @@ Comparison of different final states:
    * WW (without W decays)
 
 
+How to use:
+
+    root -l Draw.cxx\(350\)
+    root -l Draw.cxx\(650\)
+    root -l Draw.cxx\(1000\)
 
 
 
