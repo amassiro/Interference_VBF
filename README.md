@@ -13,7 +13,7 @@ List of S and S+I distributions for different Higgs masses in a common format:
 
 Comparison of different final states:
 
-   * WW > lvlv
+   * WW > lvlv (sf and df)
    * WW > lvjj
    * WW (without W decays)
 
