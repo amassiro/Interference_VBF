@@ -6,6 +6,9 @@ void Draw(int mass) {
  name.push_back("WWlvlv_df");
  name.push_back("WWlvlv_sf");
 
+ name.push_back("WWlvjj_turn_on");
+ name.push_back("WWlvjj_turn_off");
+
  int TOT = name.size();
 
  TFile* fileInput[100];
@@ -44,14 +47,17 @@ void Draw(int mass) {
 
    g_SI_over_S[i] -> SetPoint (iPoint, x_num, ratio);
 
-
    g_S[i]  -> SetTitle (name.at(i).c_str());
    g_SI[i] -> SetTitle (name.at(i).c_str());
    g_SI_over_S[i] -> SetTitle (name.at(i).c_str());
 
-   g_SI[i] -> SetLineColor (kRed + i );
-   g_S[i] -> SetLineColor  (kBlue + i );
-   g_SI_over_S[i] -> SetLineColor (kGreen + i*10 );
+   g_SI[i] -> SetLineColor (kRed + i * pow(-1,(i%2)) );
+   g_S[i] -> SetLineColor  (kBlue + i * pow(-1,(i%2)) );
+   g_SI_over_S[i] -> SetLineColor (kGreen + i * 5 * pow(-1,(i%2)) );
+
+   g_SI[i] -> SetMarkerColor (kRed + i * pow(-1,(i%2)) );
+   g_S[i] -> SetMarkerColor  (kBlue + i * pow(-1,(i%2)) );
+   g_SI_over_S[i] -> SetMarkerColor (kGreen + i * 5 * pow(-1,(i%2)) );
 
    g_S[i]  -> SetLineWidth (2);
    g_SI[i] -> SetLineWidth (2);
