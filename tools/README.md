@@ -25,3 +25,10 @@ all:
     root -l -q  tools/transform.cxx\(\"corr_woLeftRise/results_interference.1000.1.root\",\"data/1000/WWlvjj_turn_off.root\",0\)
 
 
+
+
+To tranform root TGraph into txt
+
+    root -l -q tools/dumptxt.cxx\(\"data/350/WWlvjj_turn_off\"\)
+    ls data/*/*.root | tr "." " " | awk '{print "root -l -q tools/dumptxt.cxx\\(\\@" $1 "\\@\\)"}' | tr "@" "\""
+
