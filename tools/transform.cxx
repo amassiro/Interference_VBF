@@ -1,10 +1,13 @@
 
-void transform(std::string in, std::string out) {
+void transform(std::string in, std::string out, int turnon = 1) {
  TFile* fin  = new TFile(in.c_str(), "READ");
  TFile* fout = new TFile(out.c_str(),"RECREATE");
 
  TF1* f_S  = (TF1*) fin -> Get ("func_mg_1");
- TF1* f_SI = (TF1*) fin -> Get ("func_ph_2");
+ TF1* f_SI;
+ if (turnon == 1) f_SI = (TF1*) fin -> Get ("func_ph_2");
+ if (turnon == 0) f_SI = (TF1*) fin -> Get ("func_ph_1");
+
 
  fout->cd();
 
