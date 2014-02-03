@@ -51,6 +51,10 @@ void Draw(int mass) {
    g_SI[i] -> SetTitle (name.at(i).c_str());
    g_SI_over_S[i] -> SetTitle (name.at(i).c_str());
 
+   g_SI[i] -> SetLineStyle (1-pow(-1,(i%2)) );
+   g_S[i] -> SetLineStyle  (1+pow(-1,(i%2)) );
+   g_SI_over_S[i] -> SetLineStyle (1+pow(-1,(i%2)));
+
    g_SI[i] -> SetLineColor (kRed + i * pow(-1,(i%2)) );
    g_S[i] -> SetLineColor  (kBlue + i * pow(-1,(i%2)) );
    g_SI_over_S[i] -> SetLineColor (kGreen + i * 5 * pow(-1,(i%2)) );
@@ -61,7 +65,7 @@ void Draw(int mass) {
 
    g_S[i]  -> SetLineWidth (2);
    g_SI[i] -> SetLineWidth (2);
-   g_SI_over_S[i] -> SetLineWidth (2);
+   g_SI_over_S[i] -> SetLineWidth (4);
   }
 
   mg_S  -> Add(g_S[i]);
