@@ -94,4 +94,14 @@ void Draw(int mass) {
  leg->Draw();
  cc_SI_over_S->SetGrid();
 
+ //---- dump in histogram
+ TFile* output = new TFile ("dump.root","RECREATE");
+ for (int i=0; i<TOT; i++) {
+  TH1F* histo_1 = new TH1F (name.at(i).c_str(),"",1000,0,2000);
+  for (int iBin = 0; iBin < 1000; iBin++) {
+   histo_1 -> SetBinContent (iBin+1, 0.5 * ( g_SI_over_S[i] -> Eval (iBin*2+0) + g_SI_over_S[i] -> Eval ((iBin+1)*2+0)));
+  }
+  histo_1->Write();
+ }
+
 }
