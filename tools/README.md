@@ -32,3 +32,26 @@ To tranform root TGraph into txt
     root -l -q tools/dumptxt.cxx\(\"data/350/WWlvjj_turn_off\"\)
     ls data/*/*.root | tr "." " " | awk '{print "root -l -q tools/dumptxt.cxx\\(\\@" $1 "\\@\\)"}' | tr "@" "\""
 
+
+
+
+
+Transform TH1 into TGraph
+
+    transformTH1TGraph.cxx
+
+How to use:
+
+    root -l -q tools/transformTH1TGraph.cxx\(\"data/800/lhe_800.root\",\"data/800/MCatNLO_Rickard.root\"\)
+
+
+Transform TH1 into TGraph
+
+    transformTH1TGraphFromDifferentFiles.cxx
+
+How to use:
+
+    root -l -q tools/transformTH1TGraphDifferentFiles.cxx\(\"data/800/mWW_B_dat.root\",\"data/800/mWW_SBI_dat.root\",\"data/800/MCatNLO_Franziska.root\"\)
+
+
+
