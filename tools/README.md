@@ -55,3 +55,12 @@ How to use:
 
 
 
+
+Transform Text file in TH1
+
+    transformTextTH1.cxx
+
+How to use:
+
+
+    root -l -q tools/transformTextTH1.cxx\(\"data/800/mWW_SBI_B_LO.dat\",\"data/800/mWW_B_dat.root\",\"data/800/mWW_SBI_dat.root\"\)
