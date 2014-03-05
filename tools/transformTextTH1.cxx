@@ -48,7 +48,9 @@ void transformTextTH1(std::string in, std::string out1, std::string out2) {
   h_mWW_SBI_dat -> SetBinContent(iBin+1, YSBI.at(iBin));
  }
 
+ fout1->cd();
  h_mWW_B_dat   -> Write();
+ fout2->cd();
  h_mWW_SBI_dat -> Write();
 
 }
