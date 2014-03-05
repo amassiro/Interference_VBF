@@ -25,7 +25,7 @@ void transformTextTH1(std::string in, std::string out1, std::string out2) {
   getline(file,buffer);
   std::cout << "buffer = " << buffer << std::endl;
   if (buffer != "" && buffer.at(0) != '#'){ ///---> save from empty line at the end!
-   std::cout << " buffer.at(0) = " << buffer.at(0) << std::endl;
+//    std::cout << " buffer.at(0) = " << buffer.at(0) << std::endl;
    std::stringstream line( buffer );
    line >> num;
    X.push_back(num);
