@@ -16,8 +16,8 @@ void transformTextTH1Simple(std::string in, std::string out1, std::string nameHi
  std::vector<double> X;
  std::vector<double> YB;
 
-// #          80 : dS/dmH (fb)     #          80 : dS/dmH (fb)
-//          10.0000            0.156743E-10        0.237792E-11             10.0000            0.155207E-10        0.107798E-11
+// #          80 : dS/dmH (fb)
+//          10.0000            0.156743E-10        0.237792E-11
 
  double num;
  while(!file.eof()) {
