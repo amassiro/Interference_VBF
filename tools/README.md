@@ -59,8 +59,19 @@ How to use:
 Transform Text file in TH1
 
     transformTextTH1.cxx
+    transformTextTH1Simple.cxx
 
 How to use:
 
 
     root -l -q tools/transformTextTH1.cxx\(\"data/800/mWW_SBI_B_LO.dat\",\"data/800/mWW_B_dat.root\",\"data/800/mWW_SBI_dat.root\"\)
+
+    root -l -q tools/transformTextTH1Simple.cxx\(\"data/800/800_hist.80.dat\",\"data/800/mWW_SBI_dat.root\",\"h_mWW_SBI_dat\"\)
+    root -l -q tools/transformTextTH1Simple.cxx\(\"data/800/126_hist.80.dat\",\"data/800/mWW_B_dat.root\",\"h_mWW_B_dat\"\)
+
+
+
+
+
+
+
